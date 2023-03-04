@@ -1,0 +1,35 @@
+
+Breakpoint=/home/czlimx/workspace/am335x/app/main.c:34, State=BP_STATE_DISABLED
+Breakpoint=/home/czlimx/workspace/am335x/driver/interrupt.c:26, State=BP_STATE_ON
+Breakpoint=0x00000000, State=BP_STATE_DISABLED
+Breakpoint=0x402F0400, State=BP_STATE_DISABLED
+OpenDocument="arm_cache.s", FilePath="/home/czlimx/workspace/am335x/arch/arm_cache.s", Line=8
+OpenDocument="", FilePath="", Line=0
+OpenDocument="main.c", FilePath="/home/czlimx/workspace/am335x/app/main.c", Line=0
+OpenDocument="exception.s", FilePath="/home/czlimx/workspace/am335x/arch/exception.s", Line=120
+OpenDocument="arm_faults.c", FilePath="/home/czlimx/workspace/am335x/arch/arm_faults.c", Line=0
+OpenDocument="interrupt.c", FilePath="/home/czlimx/workspace/am335x/driver/interrupt.c", Line=0
+OpenDocument="startup.s", FilePath="/home/czlimx/workspace/am335x/arch/startup.s", Line=23
+OpenToolbar="Debug", Floating=0, x=0, y=0
+OpenWindow="Call Stack", DockArea=RIGHT, x=0, y=1, w=1095, h=105, FilterBarShown=0, TotalValueBarShown=0, ToolBarShown=0
+OpenWindow="Registers 1", DockArea=RIGHT, x=0, y=3, w=1095, h=411, FilterBarShown=0, TotalValueBarShown=0, ToolBarShown=0, FilteredItems=[], RefreshRate=1
+OpenWindow="Source Files", DockArea=LEFT, x=0, y=3, w=637, h=189, FilterBarShown=0, TotalValueBarShown=0, ToolBarShown=0
+OpenWindow="Disassembly", DockArea=RIGHT, x=0, y=2, w=1095, h=368, FilterBarShown=0, TotalValueBarShown=0, ToolBarShown=0
+OpenWindow="Break & Tracepoints", DockArea=LEFT, x=0, y=0, w=637, h=296, FilterBarShown=0, TotalValueBarShown=0, ToolBarShown=0, VectorCatchIndexMask=58
+OpenWindow="Memory 1", DockArea=BOTTOM, x=1, y=0, w=818, h=328, FilterBarShown=0, TotalValueBarShown=0, ToolBarShown=0, EditorAddress=0x48200030
+OpenWindow="Local Data", DockArea=RIGHT, x=0, y=0, w=1095, h=72, FilterBarShown=0, TotalValueBarShown=0, ToolBarShown=0
+OpenWindow="Watched Data 1", DockArea=LEFT, x=0, y=1, w=637, h=240, FilterBarShown=0, TotalValueBarShown=0, ToolBarShown=0
+OpenWindow="Functions", DockArea=LEFT, x=0, y=2, w=637, h=231, FilterBarShown=0, TotalValueBarShown=0, ToolBarShown=0
+OpenWindow="Console", DockArea=BOTTOM, x=0, y=0, w=1741, h=328, FilterBarShown=0, TotalValueBarShown=0, ToolBarShown=0
+TableHeader="Vector Catches", SortCol="None", SortOrder="ASCENDING", VisibleCols=["";"Vector Catch";"Description"], ColWidths=[50;300;500]
+TableHeader="Break & Tracepoints", SortCol="None", SortOrder="ASCENDING", VisibleCols=["";"Type";"Location";"Extras"], ColWidths=[100;100;110;327]
+TableHeader="Local Data", SortCol="Name", SortOrder="ASCENDING", VisibleCols=["Name";"Value";"Location";"Size";"Type";"Scope"], ColWidths=[100;100;134;100;134;527]
+TableHeader="Functions", SortCol="Name", SortOrder="ASCENDING", VisibleCols=["Name";"Address";"Size";"#Insts";"Source"], ColWidths=[1614;104;100;100;142]
+TableHeader="Call Stack", SortCol="Function", SortOrder="ASCENDING", VisibleCols=["Function";"Stack Frame";"Source";"PC";"Return Address";"Stack Used"], ColWidths=[167;144;134;104;154;392]
+TableHeader="Source Files", SortCol="File", SortOrder="ASCENDING", VisibleCols=["File";"Status";"Size";"#Insts";"Path"], ColWidths=[27;112;27;27;462]
+TableHeader="Power Sampling", SortCol="Index", SortOrder="ASCENDING", VisibleCols=["Index";"Time";"Ch 0"], ColWidths=[100;100;100]
+TableHeader="Registers 1", SortCol="Name", SortOrder="ASCENDING", VisibleCols=["Name";"Value";"Description"], ColWidths=[265;264;1134]
+TableHeader="Watched Data 1", SortCol="Expression", SortOrder="ASCENDING", VisibleCols=["Expression";"Value";"Location";"Refresh"], ColWidths=[162;131;104;240]
+TableHeader="RegisterSelectionDialog", SortCol="None", SortOrder="ASCENDING", VisibleCols=[], ColWidths=[]
+TableHeader="TargetExceptionDialog", SortCol="Name", SortOrder="ASCENDING", VisibleCols=["Name";"Value";"Address";"Description"], ColWidths=[26;26;26;26]
+WatchedExpression="irq_array", Window=Watched Data 1

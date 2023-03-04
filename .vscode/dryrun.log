@@ -1,0 +1,18 @@
+make --dry-run --always-make --keep-going --print-directory
+make: Entering directory '/home/czlimx/workspace/temp/am335x'
+mkdir build		
+arm-none-eabi-gcc -c -Iarch/include -Idriver/include -O0 -g -Werror -fdata-sections -ffunction-sections -g -gdwarf-2 -MMD -MP -MF"build/arm_faults.d" -Wa,-a,-ad,-alms=build/arm_faults.lst arch/arm_faults.c -o build/arm_faults.o
+arm-none-eabi-gcc -c -Iarch/include -Idriver/include -O0 -g -Werror -fdata-sections -ffunction-sections -g -gdwarf-2 -MMD -MP -MF"build/interrupt.d" -Wa,-a,-ad,-alms=build/interrupt.lst driver/interrupt.c -o build/interrupt.o
+arm-none-eabi-gcc -c -Iarch/include -Idriver/include -O0 -g -Werror -fdata-sections -ffunction-sections -g -gdwarf-2 -MMD -MP -MF"build/main.d" -Wa,-a,-ad,-alms=build/main.lst app/main.c -o build/main.o
+arm-none-eabi-gcc -x assembler-with-cpp -DASSEMBLY -c -Iarch/include -Idriver/include -O0 -g -Werror -fdata-sections -ffunction-sections arch/exception.s -o build/exception.o
+arm-none-eabi-gcc -x assembler-with-cpp -DASSEMBLY -c -Iarch/include -Idriver/include -O0 -g -Werror -fdata-sections -ffunction-sections arch/startup.s -o build/startup.o
+arm-none-eabi-gcc -x assembler-with-cpp -DASSEMBLY -c -Iarch/include -Idriver/include -O0 -g -Werror -fdata-sections -ffunction-sections arch/vector.s -o build/vector.o
+arm-none-eabi-gcc -x assembler-with-cpp -DASSEMBLY -c -Iarch/include -Idriver/include -O0 -g -Werror -fdata-sections -ffunction-sections arch/arm_arch.s -o build/arm_arch.o
+arm-none-eabi-gcc -x assembler-with-cpp -DASSEMBLY -c -Iarch/include -Idriver/include -O0 -g -Werror -fdata-sections -ffunction-sections arch/arm_cache.s -o build/arm_cache.o
+arm-none-eabi-gcc -x assembler-with-cpp -DASSEMBLY -c -Iarch/include -Idriver/include -O0 -g -Werror -fdata-sections -ffunction-sections arch/arm_mmu.s -o build/arm_mmu.o
+arm-none-eabi-gcc build/arm_faults.o build/interrupt.o build/main.o build/exception.o build/startup.o build/vector.o build/arm_arch.o build/arm_cache.o build/arm_mmu.o -specs=nano.specs -Tam335x.lds -Wl,-Map=build/myboot.map,--cref -Wl,--gc-sections -nostartfiles -nodefaultlibs -nostdlib -o build/myboot.elf
+arm-none-eabi-size build/myboot.elf
+arm-none-eabi-objdump -D build/myboot.elf > build/myboot.dis
+arm-none-eabi-objcopy -O binary -S build/myboot.elf build/myboot.bin	
+make: Leaving directory '/home/czlimx/workspace/temp/am335x'
+ 

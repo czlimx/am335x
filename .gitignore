@@ -1,3 +1,4 @@
+# ---> C
 # Prerequisites
 *.d
 
@@ -7,6 +8,7 @@
 *.obj
 *.elf
 *.lst
+*.dis
 
 # Linker output
 *.ilk
@@ -52,3 +54,4 @@ modules.order
 Module.symvers
 Mkfile.old
 dkms.conf
+
